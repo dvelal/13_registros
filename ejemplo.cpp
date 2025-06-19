@@ -28,6 +28,7 @@ int main () {
             }
         }
         cin>>EMPLEADOS[i].sal;
+        //incrementamos 10% a empleados con ventas mayor a 100u durante el año"
         if (vtotales > 100)
             EMPLEADOS[i].sal = EMPLEADOS[i].sal * 1.10;
     }
@@ -43,6 +44,11 @@ int main () {
     }
     cout<<EMPLEADOS[k].num<<endl;
     cout<<EMPLEADOS[k].nom<<endl;
-
+    for (int i = 0; i < n; i++) {
+        if (EMPLEADOS[i].ven[11] < 30) {
+            cout<<EMPLEADOS[i].num<<endl;
+            cout<<EMPLEADOS[i].nom<<endl;
+        }
+    }
     return 0;
 }
