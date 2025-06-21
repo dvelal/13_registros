@@ -18,10 +18,25 @@ int main() {
         cin>>E[i].sexo;
         cin>>E[i].sueldo;
     }
+    cout<<"----Empleado(s) con menor salario----"<<endl;
+    double min = E[0].sueldo;
     for (int i = 0; i < n; i++) {
-        cout<<E[i].nombre<<endl;
-        cout<<E[i].sexo<<endl;
-        cout<<E[i].sueldo<<endl;
+        if (E[i].sueldo < min)
+            min = E[i].sueldo;
+    }
+    for (int i = 0; i < n; i++) {
+        if (E[i].sueldo == min)
+            cout<<"- "<<E[i].nombre<<endl;
+    }
+    cout<<"----Empleado(s) con mayor salario----"<<endl;
+    double max = E[0].sueldo;
+    for (int i = 0; i < n; i++) {
+        if (E[i].sueldo > max)
+            max = E[i].sueldo;
+    }
+    for (int i = 0; i < n; i++) {
+        if (E[i].sueldo == max)
+            cout<<"- "<<E[i].nombre<<endl;
     }
     return 0;
 } 
